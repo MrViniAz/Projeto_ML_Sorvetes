@@ -2,19 +2,19 @@ A seguir descrevo as ações que realizei:
 
 1. Treinei um modelo de Machine Learning para prever as vendas de sorvete com base na temperatura do dia.
 
-Desenvolvi e treinei um modelo preditivo para estimar o volume de vendas de sorvetes a partir de variáveis meteorológicas, com ênfase na temperatura diária. Coletei e pré-processei séries históricas de vendas e medições de temperatura correspondentes, apliquei engenharia de características (por exemplo, médias móveis, indicadores de sazonalidade e interações entre variáveis), selecionei algoritmos adequados e otimizei hiperparâmetros por meio de validação robusta. Avaliei o desempenho utilizando métricas como MAE e RMSE, acompanhadas de análises de erro para verificar a generalização do modelo.
+Desenvolvi e treinei um modelo preditivo para estimar o volume de vendas de sorvetes a partir de variáveis meteorológicas, com ênfase na temperatura diária. 
 
 2. Registrei e gerenciei o modelo usando o MLflow.
 
-Utilizei MLflow para rastrear o ciclo de experimentação, registrando parâmetros, métricas, artefatos (modelos serializados, gráficos de avaliação e amostras de dados) e metadados de execução para cada run. Configurei o MLflow Model Registry para versionamento dos artefatos e promovi modelos entre estágios (por exemplo, staging → production), mantendo um histórico auditável.
+Utilizei MLflow para rastrear o ciclo de experimentação, registrando parâmetros, métricas, artefatos e metadados de execução para cada run. 
 
 3. Implementei o modelo para previsões em tempo real em um ambiente de cloud computing.
 
-Implementei o modelo em um ambiente de nuvem, empacotei-o em imagem Docker e disponibilizei um endpoint de inferência (HTTP/REST) com mecanismos de autenticação. Integrei logging e monitoramento contínuo (latência, taxa de erros e métricas de qualidade preditiva) e estabeleci práticas de CI/CD com estratégias de deployment seguras, incluindo canary releases e políticas de rollback.
+Implementei o modelo em um ambiente de nuvem, em uma instância de conteiner. 
 
 4. Criei um pipeline estruturado para treinar e testar o modelo, garantindo reprodutibilidade.
 
-Implementei um pipeline orquestrado e versionado que abrange ingestão de dados, pré-processamento, divisão treino/validação/teste, treinamento, avaliação e registro de artefatos. Configurei parâmetros de execução, registrei metadados e garanti que as execuções especifiquem versões de código e dependências (por meio de lockfiles ou ambientes containerizados) e referências imutáveis aos conjuntos de dados utilizados.
+Implementei um pipeline orquestrado e versionado que abrange ingestão de dados, pré-processamento, divisão treino/validação/teste, treinamento, avaliação e registro de artefatos.
 
 Considerações finais:
-As ações realizadas asseguram rigor científico e viabilidade operacional, facilitando governança, auditoria e conformidade. Documentei as etapas do pipeline, estabeleci políticas de versionamento para dados, código e modelos e implementei monitoramento pós-implantação para detectar deriva de dados e degradação de desempenho.
+As ações realizadas asseguram rigor científico e viabilidade operacional, facilitando governança, auditoria e conformidade. 
