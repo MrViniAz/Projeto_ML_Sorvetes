@@ -1,24 +1,20 @@
-Treinamento e implantação de modelo preditivo de vendas de sorvete com registro em MLflow
+A seguir descrevo as ações que realizei:
 
 1. Treinei um modelo de Machine Learning para prever as vendas de sorvete com base na temperatura do dia.
 
-Descrição formal das ações realizadas:
-Desenvolvi e treinei um modelo preditivo para estimar o volume de vendas de sorvetes a partir de variáveis meteorológicas, com ênfase na temperatura diária. Executei a coleta e o pré-processamento de séries históricas de vendas e das medições de temperatura correspondentes, apliquei engenharia de características relevantes (por exemplo, médias móveis, indicadores de sazonalidade e interações entre variáveis) e selecionei algoritmos apropriados (regressão linear regularizada, árvores de decisão e ensembles, conforme a necessidade). Realizei validação robusta (incluindo validação cruzada temporal quando aplicável) e otimização de hiperparâmetros, avaliando o desempenho por meio de métricas adequadas (MAE, RMSE) e análises de erro para aferir a generalização do modelo.
+Desenvolvi e treinei um modelo preditivo para estimar o volume de vendas de sorvetes a partir de variáveis meteorológicas, com ênfase na temperatura diária. Coletei e pré-processei séries históricas de vendas e medições de temperatura correspondentes, apliquei engenharia de características (por exemplo, médias móveis, indicadores de sazonalidade e interações entre variáveis), selecionei algoritmos adequados e otimizei hiperparâmetros por meio de validação robusta. Avaliei o desempenho utilizando métricas como MAE e RMSE, acompanhadas de análises de erro para verificar a generalização do modelo.
 
 2. Registrei e gerenciei o modelo usando o MLflow.
 
-Descrição formal das ações realizadas:
-Utilizei MLflow para rastrear o ciclo de experimentação, registrando parâmetros, métricas, artefatos (modelos serializados, gráficos de avaliação e amostras de dados) e metadados de execução para cada run. Configurei experimentos organizados e empreguei o MLflow Model Registry para versionamento dos artefatos, promovendo modelos entre estágios (por exemplo, staging → production) e mantendo um histórico auditável que permite recuperar versões específicas para reavaliação e implantação.
+Utilizei MLflow para rastrear o ciclo de experimentação, registrando parâmetros, métricas, artefatos (modelos serializados, gráficos de avaliação e amostras de dados) e metadados de execução para cada run. Configurei o MLflow Model Registry para versionamento dos artefatos e promovi modelos entre estágios (por exemplo, staging → production), mantendo um histórico auditável.
 
 3. Implementei o modelo para previsões em tempo real em um ambiente de cloud computing.
 
-Descrição formal das ações realizadas:
-Implantei o modelo em um ambiente de nuvem adequado, garantindo previsões de baixa latência e alta disponibilidade. Empacotei o modelo em imagem Docker e disponibilizei um endpoint de inferência (HTTP/REST) protegido por mecanismos de autenticação/autorização. Integrei logging e monitoramento contínuo para métricas operacionais (latência, taxa de erros) e qualidade preditiva, e estabeleci práticas de CI/CD com estratégias de deployment seguras (por exemplo, canary releases e políticas de rollback).
+Implementei o modelo em um ambiente de nuvem, empacotei-o em imagem Docker e disponibilizei um endpoint de inferência (HTTP/REST) com mecanismos de autenticação. Integrei logging e monitoramento contínuo (latência, taxa de erros e métricas de qualidade preditiva) e estabeleci práticas de CI/CD com estratégias de deployment seguras, incluindo canary releases e políticas de rollback.
 
 4. Criei um pipeline estruturado para treinar e testar o modelo, garantindo reprodutibilidade.
 
-Descrição formal das ações realizadas:
-Implementei um pipeline orquestrado e versionado que abrange ingestão de dados, pré-processamento, divisão treino/validação/teste, treinamento, avaliação e registro de artefatos. Utilizei ferramentas de orquestração para assegurar execuções reproduzíveis e auditáveis, configurei parâmetros de execução, registrei metadados e garanti que todas as execuções especifiquem versões do código e dependências (por meio de lockfiles ou ambientes containerizados) e referências imutáveis aos conjuntos de dados usados.
+Implementei um pipeline orquestrado e versionado que abrange ingestão de dados, pré-processamento, divisão treino/validação/teste, treinamento, avaliação e registro de artefatos. Configurei parâmetros de execução, registrei metadados e garanti que as execuções especifiquem versões de código e dependências (por meio de lockfiles ou ambientes containerizados) e referências imutáveis aos conjuntos de dados utilizados.
 
 Considerações finais:
-As ações realizadas visam assegurar rigor científico e viabilidade operacional, facilitando governança, auditoria e conformidade. Documentei as etapas do pipeline, estabeleci políticas de versionamento para dados, código e modelos, e implementei monitoramento pós-implantação para detectar deriva de dados e degradação de desempenho.
+As ações realizadas asseguram rigor científico e viabilidade operacional, facilitando governança, auditoria e conformidade. Documentei as etapas do pipeline, estabeleci políticas de versionamento para dados, código e modelos e implementei monitoramento pós-implantação para detectar deriva de dados e degradação de desempenho.
