@@ -1,4 +1,4 @@
-Pasta "Readme"
+Pasta "Readme".
 Seguem evidências da criação do projeto de Machine Learning  sobre a previsão da quantidade de vendas a partir da temperatura do dia:
 
 <img width="1645" height="413" alt="image" src="https://github.com/user-attachments/assets/57b7ecfb-c2b5-477d-9bcf-850f8465ebe8" />
